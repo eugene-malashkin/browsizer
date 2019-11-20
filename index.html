@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browsizer</title>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script>
+    function displaySize() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerText = document.body.clientWidth + ' x ' + document.body.clientHeight;
+
+    }
+  </script>
+</head>
+<body onload="displaySize()">
+  <div id="result"></div>
+</body>
+</html>
