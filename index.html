@@ -29,6 +29,8 @@
 
     function isIPad() {
       const { platform, maxTouchPoints }  = window.navigator;
+      return 'A';
+
       if (/iPad|iPhone|iPod/.test(platform)) {
         // iPhone or legacy iPad
         return true;
