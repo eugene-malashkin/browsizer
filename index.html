@@ -14,14 +14,20 @@
     }
   </style>
   <script>
-    function displaySize() {
+    function display() {
+      const parameters = [
+        `size = ${document.body.clientWidth} x ${document.body.clientHeight} px`,
+        `navigator.platform = ${navigator.platform}`,
+        `navigator.userAgent = ${navigator.userAgent}`,
+        `navigator.maxTouchPoints = ${navigator.maxTouchPoints}`,
+        `window.ontouchstart = ${window.ontouchstart}`
+      ];
       const resultDiv = document.getElementById('result');
-      resultDiv.innerText = document.body.clientWidth + ' x ' + document.body.clientHeight;
-
+      resultDiv.innerHTML = parameters.join('<br/>')
     }
   </script>
 </head>
-<body onload="displaySize()">
+<body onload="display()">
   <div id="result"></div>
 </body>
 </html>
