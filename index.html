@@ -20,10 +20,23 @@
         `navigator.platform = ${navigator.platform}`,
         `navigator.userAgent = ${navigator.userAgent}`,
         `navigator.maxTouchPoints = ${navigator.maxTouchPoints}`,
-        `window.ontouchstart = ${window.ontouchstart}`
+        `window.ontouchstart = ${window.ontouchstart}`,
+        `isIPad = ${isIPad()}`
       ];
       const resultDiv = document.getElementById('result');
       resultDiv.innerHTML = parameters.join('<br/>')
+    }
+
+    const isIPad = () => {
+      const { platform, maxTouchPoints }  = window.navigator;
+      if (/iPad|iPhone|iPod/.test(platform)) {
+        // iPhone or legacy iPad
+        return true;
+      }
+
+      // Is this novel iPadOS
+      return (platform === 'MacIntel') && (maxTouchPoints > 2);
+
     }
   </script>
 </head>
