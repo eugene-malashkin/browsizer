@@ -29,13 +29,17 @@
 
     const isIPad = () => {
       const { platform, maxTouchPoints }  = window.navigator;
+      return 'A';
       if (/iPad|iPhone|iPod/.test(platform)) {
         // iPhone or legacy iPad
         return true;
       }
 
+      /*
       // Is this novel iPadOS
       return (platform === 'MacIntel') && (maxTouchPoints > 2);
+      */
+
     }
   </script>
 </head>
