@@ -22,7 +22,7 @@
         `navigator.maxTouchPoints = ${navigator.maxTouchPoints}`,
         `window.ontouchstart = ${window.ontouchstart}`,
         `isIPad = ${isIPad()}`,
-        'That is all'
+        'That is all 2'
       ];
       const resultDiv = document.getElementById('result');
       resultDiv.innerHTML = parameters.join('<br/>')
@@ -31,7 +31,7 @@
     function isIPad() {
       const { platform, maxTouchPoints }  = window.navigator;
       if (/iPad|iPhone|iPod/.test(platform)) {
-        // iPhone or legacy iPad
+        // iPhone or legacy iPad. Let's give iPad experience
         return true;
       }
 
